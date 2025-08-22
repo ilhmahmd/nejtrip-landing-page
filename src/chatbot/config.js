@@ -7,7 +7,7 @@ import { transportOptions } from '../data/transportData';
 
 const config = {
     initialMessages: [
-        createChatBotMessage('Halo! Saya Nejbot AI. Ada yang bisa saya bantu?', {
+        createChatBotMessage('Hai! saya Asisten virtual Nejtrip. Mau tanya paket trip Banda Neira?', {
             withAvatar: false
         }),
         createChatBotMessage('Anda bisa pilih salah satu opsi di bawah ini:', {
