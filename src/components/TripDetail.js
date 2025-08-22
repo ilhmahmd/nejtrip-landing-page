@@ -114,7 +114,7 @@ function TripDetail() {
           </div>
         </div>
       )}
-      
+
       {/* Jadwal Open Trip */}
       <div className="card mb-3 shadow-sm">
         <div
@@ -134,13 +134,16 @@ function TripDetail() {
                 <tr>
                   <th>Bulan</th>
                   <th>Tanggal</th>
+                  <th>Peserta</th> {/* Kolom baru untuk jumlah peserta */}
                 </tr>
               </thead>
               <tbody>
-                {trip.schedule.map(([bulan, tanggal], idx) => (
+                {/* Menggunakan map dengan destructuring untuk mengakses elemen array */}
+                {trip.schedule.map(([bulan, tanggal, peserta], idx) => (
                   <tr key={idx}>
                     <td>{bulan}</td>
                     <td>{tanggal}</td>
+                    <td>{peserta}</td> {/* Menampilkan jumlah peserta */}
                   </tr>
                 ))}
               </tbody>
@@ -162,7 +165,7 @@ function TripDetail() {
               <thead>
                 <tr>
                   <th>Jumlah Orang</th>
-                  <th>Harga/Orang</th>
+                  <th>Harga Per Orang</th> {/* Perbarui judul kolom agar lebih jelas */}
                 </tr>
               </thead>
               <tbody>
@@ -272,18 +275,18 @@ function TripDetail() {
               ))}
             </ul>
             <br></br>
-            <p><strong style={{ color: 'green'}}>Free</strong> Dokumentasi Underwater (Insta360)</p>
+            <p><strong style={{ color: 'green' }}>Free</strong> Dokumentasi Underwater (Insta360)</p>
           </div>
         )}
       </div>
-      
-      <a 
-        href="https://wa.me/6281264427001?text=Halo%20kak,%20aku%20tertarik%20sama%20tripnya%20setelah%20liat%20di%20website.%20Bisa%20dikirim%20info%20selengkapnya%20kak?" 
-        target="_blank" 
-        rel="noopener noreferrer" 
+
+      <a
+        href="https://wa.me/6281264427001?text=Halo%20kak,%20aku%20tertarik%20sama%20tripnya%20setelah%20liat%20di%20website.%20Bisa%20dikirim%20info%20selengkapnya%20kak?"
+        target="_blank"
+        rel="noopener noreferrer"
         className="d-block mt-3"
       >
-        <button 
+        <button
           className="btn w-100 py-2 text-white pulse-animation"
           style={{ backgroundColor: '#25D366', fontWeight: 700 }}
         >
