@@ -28,9 +28,9 @@ const clientData = [
     photos: [
       { id: '2-1', src: '/images/g21.jpg', alt: 'Dokumentasi Klien 2' },
       { id: '2-2', src: '/images/g22.png', alt: 'Dokumentasi Klien 2' },
-      { id: '2-3', src: '/images/g23.jpg', alt: 'Dokumentasi Klien 2' },
-      { id: '2-4', src: '/images/g24.jpg', alt: 'Dokumentasi Klien 2' },
-      { id: '2-5', src: '/images/g25.jpg', alt: 'Dokumentasi Klien 2' },
+      { id: '2-3', src: '/images/g23.png', alt: 'Dokumentasi Klien 2' },
+      { id: '2-4', src: '/images/g24.png', alt: 'Dokumentasi Klien 2' },
+      { id: '2-5', src: '/images/g25.png', alt: 'Dokumentasi Klien 2' },
       { id: '2-6', src: '/images/g26.jpg', alt: 'Dokumentasi Klien 2' },
       { id: '2-7', src: '/images/g27.jpg', alt: 'Dokumentasi Klien 2' },
       { id: '2-8', src: '/images/g28.jpg', alt: 'Dokumentasi Klien 2' },
