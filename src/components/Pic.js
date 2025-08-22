@@ -27,7 +27,7 @@ const clientData = [
     clientName: 'Solo Trip (Private Trip)',
     photos: [
       { id: '2-1', src: '/images/g21.jpg', alt: 'Dokumentasi Klien 2' },
-      { id: '2-2', src: '/images/g22.jpg', alt: 'Dokumentasi Klien 2' },
+      { id: '2-2', src: '/images/g22.png', alt: 'Dokumentasi Klien 2' },
       { id: '2-3', src: '/images/g23.jpg', alt: 'Dokumentasi Klien 2' },
       { id: '2-4', src: '/images/g24.jpg', alt: 'Dokumentasi Klien 2' },
       { id: '2-5', src: '/images/g25.jpg', alt: 'Dokumentasi Klien 2' },
