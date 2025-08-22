@@ -17,9 +17,9 @@ const testimonials = [
     location: 'ilhamahmadmau'
   },
   {
-    name: 'Sari Lestari',
-    review: 'Iyes, aku explore Banda Neira trip nya di @nejtrip asli seruu banget kalau kalian mau kesini, kita semua disini baru kenal dan langsung akrab karena dari service nya mantap banget bisa membawa suasananya, dokumentasinya keren banget coba cek ig/tiktok pasti pernah muncul di FYP kalian kalo cari Banda Neira. ',
-    location: 'Surabaya'
+    name: 'Felisa',
+    review: 'Hai kak, Mau ngucapin thank you so much buat unforgettable trip selama di Banda Neira kemarin. We have lots of fun, itinerary nya teratur dan menyenangkan, guidenya juga seru bgtt enakk, apalagi foto² dan videonya cakep² parah sampe temen²ku bnyak yg nanyain hehe, smoga sukses terus buat nejtrip ya kak 🤲✨',
+    location: 'felisa'
   }
 ];
 

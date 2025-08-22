@@ -12,9 +12,9 @@ export const transportOptions = [
     },
     {
         id: 2,
-        name: 'Pelni Nggapulu',
+        name: 'Pelni Labobar',
         icon: './images/pel.png',
-        description: 'Kapal Pelni Nggapulu melayani rute jarak jauh dari kota-kota besar. Durasi perjalanan di laut dari Ambon ke Banda: 9 jam. Cocok untuk Anda yang ingin membawa banyak barang atau berwisata lebih lama.',
+        description: 'Kapal Pelni Labobar melayani rute jarak jauh dari kota-kota besar. Durasi perjalanan di laut dari Ambon ke Banda: 9 jam. Cocok untuk Anda yang ingin membawa banyak barang atau berwisata lebih lama.',
         schedule: [
             { day: ' ', route: 'Jakarta, Surabaya, Makassar, Baubau, Ambon → Banda' },
             { day: ' ', route: 'Banda → Tual, Dobo, Kaimana, Fakfak' },

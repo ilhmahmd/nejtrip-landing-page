@@ -88,7 +88,7 @@ export const destinations = [
   { 
     id: 13, 
     name: 'Rumah Pengasingan Sutan Sjahrir', 
-    image: '/images/belgica.jpg', 
+    image: '/images/asing.jpg', 
     description: 'Seperti Bung Hatta, Sutan Sjahrir juga pernah diasingkan di Banda Neira. Rumah ini memberikan gambaran tentang kehidupan dan pemikiran Sjahrir selama masa pengasingan. Di sinilah ia menulis beberapa karyanya yang terkenal. Rumah ini kini menjadi museum yang terbuka untuk umum.\n\nSjahrir diasingkan di Banda Neira bersama Bung Hatta. Selama masa pengasingan, Sjahrir dan Bung Hatta menjadi sahabat dan sering berdiskusi tentang kondisi politik di Hindia Belanda. Sjahrir dikenal sebagai intelektual yang cerdas dan sering mengadakan pertemuan dengan pemuda lokal untuk membahas politik.\n\nSelama di Banda, Sjahrir memiliki hobi bermain tenis dan sering mengajak penduduk lokal untuk bermain bersama. Hal ini menunjukkan kedekatan beliau dengan masyarakat setempat.',
     slideshow: ['/images/belgica.jpg', '/images/belgica_slide2.jpg', '/images/belgica_slide3.jpg']
   },

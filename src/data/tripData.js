@@ -8,11 +8,11 @@ export const trips = [
     description: "Nikmati petualangan tak terlupakan selama 4 hari 3 malam di Banda Neira. Trip ini dirancang untuk Anda yang ingin menjelajahi keindahan alam, kekayaan sejarah, dan budaya di salah satu surga tersembunyi di Indonesia.",
     mepo: "Pelabuhan/Bandara Banda Neira",
     schedule: [
-      ['Agustus', '20-23'],
-      ['Agustus', '25-28'],
-      ['September', '4-7'],
-      ['September', '18-21'],
-      ['September', '25-28'],
+      ['Agustus', '25-28', ''],
+      ['September', '4-7', '3 orang'],
+      ['September', '18-21', ''],
+      ['September', '25-28', '1 org'],
+      ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",
@@ -75,11 +75,11 @@ export const trips = [
     notes: "Lebih dari 5 orang free pulau Hatta/nailaka",
     mepo: "Pelabuhan/Bandara Banda Neira",
     schedule: [
-      ['Agustus', '20-23'],
-      ['Agustus', '25-28'],
-      ['September', '4-7'],
-      ['September', '18-21'],
-      ['September', '25-28'],
+      ['Agustus', '25-28', ''],
+      ['September', '4-7', '3 orang'],
+      ['September', '18-21', ''],
+      ['September', '25-28', '1 org'],
+      ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",
@@ -130,11 +130,11 @@ export const trips = [
       { pax: "5", price: "IDR 3.300.000 /pax" },
     ],
     schedule: [
-      ['Agustus', '20-23'],
-      ['Agustus', '25-28'],
-      ['September', '4-7'],
-      ['September', '18-21'],
-      ['September', '25-28'],
+      ['Agustus', '25-28', ''],
+      ['September', '4-7', '3 orang'],
+      ['September', '18-21', ''],
+      ['September', '25-28', '1 org'],
+      ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",
