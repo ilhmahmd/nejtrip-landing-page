@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 // Cukup definisikan satu gambar yang ingin digunakan
-const bannerImage = '/images/bans.png';
+const bannerImage = '/images/banss.png';
 
 function Banner() {
     useEffect(() => {
