@@ -1,0 +1,227 @@
+/* --- Styling untuk layout utama trips --- */
+.trips {
+    text-align: left;
+    /* Rata kiri untuk seluruh section */
+}
+
+/* --- Styling Kontainer untuk Grid Utama --- */
+.trips .container {
+    max-width: 1500px;
+
+}
+
+
+/* --- Styling Kolom Kiri (Judul & Deskripsi) --- */
+.trips .col-lg-6.d-flex {
+    text-align: left;
+    padding-right: 30px;
+    /* Pastikan teks di kolom kiri rata kiri */
+}
+
+/* --- Styling Kolom Kanan (Daftar Trip) --- */
+.trips .col-lg-6.d-flex.flex-column {
+    display: flex;
+    flex-direction: column;
+    padding-left: 30px;
+    margin-top: -20px;
+}
+
+/* --- Styling Judul Animasi --- */
+.trips h2 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    color: #0081a1;
+    line-height: 1.2;
+    vertical-align: top;
+    margin-bottom: 10px;
+}
+
+.trips h3 {
+    margin-bottom: -1px;
+}
+
+.typing-text {
+    overflow: hidden;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.typing-cursor {
+    height: 1em;
+    width: 3px;
+    background-color: #0081a1;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2px;
+}
+
+/* --- Styling Kontainer Kartu Trip --- */
+.trip-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    /* Kartu berjejer dari kiri */
+    align-items: stretch;
+    /* Membuat tinggi kartu seragam */
+}
+
+/* --- Styling untuk setiap Kartu Trip --- */
+.trip-card {
+    position: relative;
+    flex: 1 1 50px;
+    /* Fleksibilitas lebar kartu */
+    max-width: 300px;
+    height: auto;
+    margin-top: -30px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trip-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0px 10px 30px rgba(252, 164, 2, 0.637);
+}
+
+.trip-card-image {
+    position: relative;
+    width: 100%;
+    height: 210px;
+    overflow: hidden;
+}
+
+.trip-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.trip-card-image:hover img {
+    transform: scale(1.05);
+}
+
+.trip-card-title-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.trip-title {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 35px;
+    margin: 0;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.trip-card-footer {
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    height: 50px;
+}
+
+.trip-price {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    margin-top: 5px;
+    color: #fb8000;
+}
+
+
+/* --- Animasi FadeIn dan delay --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.trip-card.animate {
+    animation-name: fadeInUp;
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+
+.trip-card.animate:nth-child(1) {
+    animation-delay: 1.1s;
+}
+
+.trip-card.animate:nth-child(2) {
+    animation-delay: 1.5s;
+}
+
+.trip-card.animate:nth-child(3) {
+    animation-delay: 2.0s;
+}
+
+.trip-card.animate:nth-child(4) {
+    animation-delay: 2.5s;
+}
+
+/* --- Media Queries untuk Responsif --- */
+@media (max-width: 991px) {
+    .trips h2 {
+        font-size: 1.5rem;
+        max-width: 100%;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .trips h3 {
+        margin-top: -25px;
+    }
+
+    .trips p {
+        text-align: left;
+        padding-left: 12px;
+    }
+
+    .trip-title {
+        font-size: 40px;
+        margin-bottom: -40px;
+    }
+
+    .trip-price {
+        font-size: 22px;
+    }
+
+    .trips .col-lg-6.d-flex {
+        text-align: center;
+        /* Rata tengah di layar kecil */
+    }
+
+    .trip-cards {
+        justify-content: center;
+        gap: 50px;
+        
+    }
+
+    .trip-card {
+        flex: 1 1 100%;
+        align-items: center;
+        /* Kartu menjadi satu kolom di layar super kecil */
+        width: 300px;
+        height: auto;
+    }
+}

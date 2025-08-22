@@ -1,0 +1,1323 @@
+/* index.css atau global stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body,
+html,
+#root {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background: rgba(228, 228, 228, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 80px;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo img {
+  height: 60px;
+  width: auto;
+}
+
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.60);
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+}
+
+.nav-item a {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: #0081a1;
+  transition: color 0.3s;
+}
+
+.banner {
+  height: 600px;
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
+  /* Latar belakang putih agar efek robekan terlihat */
+}
+
+/* Background untuk efek slideshow dan parallax */
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 120%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity cubic-bezier(0.23, 1, 0.320, 1) ease-in-out;
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Menambahkan keyframe animasi untuk transisi */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.banner-bg {
+  animation: fadeIn 3s ease-in-out;
+  /* Memicu animasi saat gambar baru dimuat */
+}
+
+/* Teks banner */
+.banner-text {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.banner-text img {
+  height: auto;
+  max-width: 380px;
+  width: 100%;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.card h2 {
+  margin-bottom: 0.5rem;
+}
+
+.hero img {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+}
+
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.testimonial-title {
+  display: inline-block;
+  /* Penting untuk animasi width */
+  margin: 0 auto;
+  /* Menengahkan judul */
+  text-align: center;
+}
+
+.testimonial-title span {
+  display: inline-block;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+    /* Sedikit membesar */
+  }
+
+  100% {
+    transform: scale(1);
+    /* Kembali ke ukuran normal */
+  }
+}
+
+/* Terapkan animasi pada tombol */
+.pulse-animation {
+  animation: pulse 1.5s infinite;
+  /* Nama animasi, durasi, dan pengulangan tak terbatas */
+  will-change: transform;
+  /* Optimasi performa untuk animasi */
+}
+
+
+
+
+.gallery-section {
+  padding: 40px 0;
+  text-align: center;
+  overflow: hidden;
+
+}
+
+.gallery-wrapper {
+  overflow: hidden;
+  /* Penting! Ini menyembunyikan card yang di luar viewport */
+  width: 100%;
+
+}
+
+.gallery-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  color: #0081a1;
+  /* Perbaiki warna agar sama dengan h2 lainnya */
+  max-width: 400px;
+  margin: 0 auto;
+  line-height: 1.2;
+  text-align: center;
+  vertical-align: top;
+}
+
+.gallery-title span {
+  display: inline-block;
+  white-space: nowrap;
+  /* Tambahkan overflow: hidden; di sini agar teks tidak terlihat sebelum diketik */
+  overflow: hidden;
+  vertical-align: top;
+}
+
+/* --- Container Slider & Scrolling --- */
+.gallery-container {
+  display: flex;
+  gap: 16px;
+
+  padding: 0 20px;
+  -webkit-overflow-scrolling: touch;
+  /* Untuk scrolling yang halus di iOS */
+}
+
+/* Sembunyikan scrollbar bawaan */
+.gallery-container::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery-container {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* --- Kartu Galeri --- */
+.gallery-card {
+  position: relative;
+  width: 254px;
+  height: 350px;
+  /* Tinggi tetap untuk semua kartu */
+  border-radius: 12px;
+  overflow: hidden;
+  flex-shrink: 0;
+  cursor: pointer;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  scroll-snap-align: center;
+  /* Efek "terpaku" saat scrolling */
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Memastikan gambar mengisi area tanpa distorsi */
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.05);
+}
+
+/* --- Caption & Tombol --- */
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  background: linear-gradient(to right, #0081a1, transparent 180%);
+  color: #fff;
+  text-align: left;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.caption h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.read-more-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.9rem;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+
+
+
+.nav-button {
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  font-size: 30px;
+  font-weight: 800;
+  cursor: pointer;
+  margin: 0 10px;
+  outline: none;
+  border: none;
+  /* jika ingin menghilangkan border juga */
+}
+
+.nav-button:focus {
+  outline: none;
+  box-shadow: none;
+  /* untuk browser yang menambahkan efek shadow saat focus */
+}
+
+
+.footer {
+  background-color: #0081a1;
+  color: #ffffff;
+  padding: 40px 20px 20px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 10px;
+  object-fit: contain;
+}
+
+.footer-description {
+  color: #ffffff;
+  line-height: 1.5;
+  max-width: 300px;
+}
+
+.footer-column h6 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 4px solid #df9800;
+  color: #ffffff;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.footer-logo {
+  max-width: 100%;
+  height: 70px;
+}
+
+.footer-icon {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+
+.why-us {
+  padding: 1rem 1rem;
+}
+
+.why-us h2 {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  color: #0081a1;
+}
+
+.why-us h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #6c757d;
+  margin-bottom: 2.5rem;
+  /* Tambahkan kembali margin untuk h3 */
+}
+
+.whyus-list {
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  list-style: none;
+  padding: 0;
+  /* Penting: Hapus padding default */
+  margin: 0;
+  /* Penting: Hapus margin default */
+}
+
+.whyus-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.check-icon {
+  color: #fb8000;
+  margin-right: 1rem;
+  font-size: 1.1rem;
+}
+
+.check-iconn {
+  color: #fb8000;
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+  margin-left: -30px;
+}
+
+.check-icon2 {
+  color: #f1564b;
+  margin-right: 0.8rem;
+  font-size: 1.1rem;
+  margin-left: -30px;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background-color: #25d366;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  border-radius: 30px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  font-weight: 500;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.05);
+}
+
+.whatsapp-icon {
+  width: 28px;
+  height: 28px;
+}
+
+.whatsapp-text {
+  font-size: 14px;
+}
+
+.testimonial-section {
+  padding: 40px 20px;
+  background-color: #fefefe;
+  text-align: center;
+}
+
+.testimonial-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-card {
+  background-color: #0081a1;
+  border-radius: 10px;
+  max-width: 300px;
+  /* Kunci perbaikan 1: Atur padding atas lebih besar untuk ruang ikon */
+  padding-top: 60px;
+  padding-right: 30px;
+  padding-bottom: 30px;
+  padding-left: 30px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  text-align: left;
+  position: relative;
+
+  /* Kunci perbaikan 2: Flexbox untuk menyusun elemen secara vertikal */
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  /* Kunci: Membesarkan card dan mengubah bayangan */
+  transform: scale(5.05);
+  box-shadow: 0px 10px 30px rgba(223, 152, 0, 0.6);
+}
+
+.testimonial-card p {
+  margin-top: 0;
+}
+
+.testimonial-review {
+  font-size: 16px;
+  font-style: normal;
+  /* Kunci perbaikan 3: Beri margin lebih besar dari atas */
+  margin-top: 0;
+  margin-bottom: 10;
+  font-family: "Nunito", sans-serif;
+  color: #fff;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.testimonial-name {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 21px;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.testimonial-loc {
+  font-weight: 400;
+  color: #b9f1ff;
+  font-size: 16px;
+  font-family: "Nunito", sans-serif;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  font-size: 35px;
+  color: #ffffff;
+}
+
+/* Styling garis pembatas di atas nama */
+.testimonial-divider {
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  /* Kunci perbaikan 4: Dorong garis pembatas ke bagian paling bawah */
+  margin-top: auto;
+}
+
+.banda-section {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  /* Atur tinggi section sesuai kebutuhan */
+  background-image: url('/public/images/ban.jpg');
+  /* Pastikan path gambar benar */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  /* Efek parallax */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  margin-top: 40px;
+  margin-bottom: 30px;
+
+}
+
+.police-line {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  /* Tinggi garis police line */
+  background-color: #fb8000;
+  /* Warna kuning */
+  z-index: 3;
+  /* Pastikan di atas semua elemen */
+  overflow: hidden;
+
+}
+
+.police-line-bottom {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  /* Tinggi garis police line */
+  background-color: #0081a1;
+  /* Warna kuning */
+  z-index: 3;
+  /* Pastikan di atas semua elemen */
+  overflow: hidden;
+}
+
+.top-line {
+  top: 0;
+}
+
+.bottom-line {
+  bottom: 0;
+}
+
+.scrolling-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 4;
+  /* Pastikan teks di atas police line */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-text {
+  font-family: "Nunito", sans-serif;
+  white-space: nowrap;
+  font-size: 1rem;
+  /* Ukuran font disesuaikan agar pas di garis */
+  font-weight: 800;
+  color: #ffffff;
+  /* Warna teks hitam agar terlihat di police line */
+  display: inline-block;
+  animation: scroll-right-to-left 60s linear infinite;
+  position: relative;
+  margin-top: 7px;
+  /* Agar z-index bekerja */
+  z-index: 5;
+}
+
+.scrolling-text-bottom {
+  font-family: "Nunito", sans-serif;
+  white-space: nowrap;
+  font-size: 1rem;
+  /* Ukuran font disesuaikan agar pas di garis */
+  font-weight: 800;
+  color: #ffffff;
+  /* Warna teks hitam agar terlihat di police line */
+  display: inline-block;
+  animation: scroll-left-to-right 60s linear infinite;
+  position: relative;
+  margin-top: 7px;
+  /* Agar z-index bekerja */
+  z-index: 5;
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    /* Mulai dari luar layar sebelah kanan */
+    transform: translateX(100vw);
+  }
+
+  100% {
+    /* Berakhir di luar layar sebelah kiri, memastikan teks hilang sepenuhnya */
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    /* Mulai dari luar layar sebelah kanan */
+    transform: translateX(-100%);
+  }
+
+  100% {
+    /* Berakhir di luar layar sebelah kiri, memastikan teks hilang sepenuhnya */
+    transform: translateX(100vw);
+  }
+}
+
+
+/* --- Overlay Gelap pada Gambar --- */
+.banda-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Perbaikan: Menggunakan warna #df9800 dengan transparansi */
+  background: rgba(0, 0, 0, 0.603);
+  z-index: 1;
+}
+
+/* --- Container Teks --- */
+.banda-text-container {
+  position: relative;
+  z-index: 2;
+  /* Pastikan teks di atas overlay */
+  max-width: 800px;
+  /* Batasi lebar teks agar tidak terlalu panjang */
+  padding: 20px;
+  text-align: left;
+  /* Teks rata kiri */
+}
+
+.banda-title {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 2.2em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.banda-description {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.6;
+}
+
+
+.destinasi-detail-page {
+  font-family: 'Nunito', sans-serif;
+  padding: 50px 20px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Slideshow */
+.destinasi-slideshow-card {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.slide-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.destinasi-slideshow-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 30px;
+  color: white;
+}
+
+.destinasi-title {
+  font-size: 2.5em;
+  font-weight: 800;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Deskripsi */
+.destinasi-description-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  line-height: 1.7;
+  color: #495057;
+  text-align: justify;
+}
+
+.destinasi-description-card p {
+  margin-bottom: 15px;
+}
+
+.info-page {
+  font-family: 'Nunito', sans-serif;
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container2 {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-title {
+  font-weight: 800;
+  color: #005e9c;
+  margin-bottom: 10px;
+}
+
+.main-subtitle {
+  color: #6c757d;
+  font-size: 1.1em;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+.transport-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.transport-card {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 1 1 350px;
+}
+
+.transport-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.icon-wrapper {
+  margin-bottom: 20px;
+}
+
+.transport-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.transport-name {
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 15px;
+}
+
+.transport-description {
+  color: #495057;
+  font-size: 0.95em;
+  line-height: 1.6;
+}
+
+.schedule-box {
+  background-color: #f1f5f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 25px;
+  overflow-x: auto;
+}
+
+.schedule-title {
+  font-weight: 700;
+  color: #005e9c;
+  margin-bottom: 10px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.schedule-table td {
+  padding: 8px;
+  border-bottom: 1px solid #e9ecef;
+  color: #343a40;
+  vertical-align: middle;
+  font-size: 0.9em;
+}
+
+.schedule-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.terms-and-conditions-page {
+  font-family: 'Nunito', sans-serif;
+  padding: 80px 20px;
+  background-color: #f8f9fa;
+  line-height: 1.6;
+  color: #495057;
+}
+
+.page-title {
+  font-weight: 800;
+  color: #005e9c;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.last-updated {
+  text-align: center;
+  color: #6c757d;
+  font-size: 0.9em;
+  margin-bottom: 50px;
+}
+
+.terms-section {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.terms-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.terms-header:hover {
+  color: #005e9c;
+}
+
+.terms-header h2 {
+  color: #212529;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin: 0;
+}
+
+.terms-header .toggle-icon {
+  font-size: 1.5em;
+  color: #6c757d;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.terms-header .toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+.terms-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-out;
+}
+
+.terms-content.open {
+  max-height: 500px;
+  /* Nilai ini harus lebih besar dari tinggi konten */
+  padding-top: 15px;
+}
+
+.terms-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.terms-content ul li {
+  margin-bottom: 5px;
+}
+
+.terms-content ul ul {
+  list-style-type: circle;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.quote-section {
+  color: rgb(0, 133, 173);
+  padding: 100px 40px;
+  text-align: center;
+  font-family: 'Corinthia', cursive;
+}
+
+.quote-text {
+  font-size: 3em;
+  font-weight: 600;
+  max-width: 800px;
+  margin: 0 auto 20px;
+  line-height: 0.5;
+}
+
+.quote-author {
+  font-size: 2em;
+  font-weight: 600;
+  color: #fb8000
+    /* Warna teks yang sedikit lebih terang */
+}
+
+.lottie-animation {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why-us .row {
+  flex-direction: row;
+}
+
+/* src/components/Loader.css */
+
+.loader-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.react-chatbot-kit-chat-container {
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Styling untuk widget pilihan */
+.chatbot-options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chatbot-option-button {
+  background-color: white; /* Latar belakang putih */
+  color: #333; /* Warna teks gelap */
+  border: 1px solid #ddd; /* Border abu-abu tipis */
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 12px 15px; /* Padding lebih besar */
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Bayangan halus */
+}
+
+.chatbot-option-button:hover {
+  background-color: #f7f7f7; /* Warna latar belakang sedikit berubah saat di-hover */
+  border-color: #ccc; /* Warna border sedikit berubah */
+  transform: translateY(-2px); /* Efek sedikit naik saat di-hover */
+}
+
+
+@media (max-width: 991px) {
+  .body {
+    background-color: #005e9c;
+  }
+
+  .loader-container {
+    /* Mengubah ukuran kontainer Lottie menjadi lebih kecil */
+    width: 200px; /* Atur lebar yang Anda inginkan */
+    height: 200px; /* Atur tinggi yang Anda inginkan */
+  }
+
+  .lottie-animation {
+    margin-bottom: 1px;
+    margin-top: 5px;
+    align-items: center;
+    margin-left: -0.7rem;
+    justify-content: center;
+  }
+
+  .navbar-nav .nav-item {
+    margin: 10px 0;
+  }
+
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255);
+    /* beri background putih semi transparan */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    /* width: 10px; */
+  }
+
+  .banner-text img {
+    width: 220px;
+    margin-top: -60px;
+    margin-left: -10px;
+  }
+
+  .banner {
+    height: 600px;
+    z-index: -1;
+    margin-bottom: -60px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #ffffff;
+    /* Latar belakang putih agar efek robekan terlihat */
+  }
+
+  .banner-bg {
+    background-size: cover;
+  }
+
+  .navbar-brand img {
+    height: 40px !important;
+    margin-left: 10px;
+  }
+
+  .navbar-collapse {
+    border: none;
+    outline: none;
+    box-shadow: none !important;
+  }
+
+  /* .whyus-list li {
+    display: flex;
+    align-items: center;
+    margin-left: 80px;
+    justify-content: center;
+  } */
+
+  .nav-button {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    color: #dfdfdf;
+  }
+
+  .whatsapp-text {
+    display: none;
+  }
+
+  .whatsapp-float {
+    padding: 10px;
+    border-radius: 50%;
+    position: fixed;
+  }
+
+  
+
+  .about-banner img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+
+  .why-us .row {
+    flex-direction: column-reverse;
+    /* Animasi di atas teks di HP */
+  }
+
+  .whyus-list {
+    text-align: left;
+    margin-bottom: 2rem;
+    /* Tambahkan jarak di bawah list di mobile */
+  }
+
+  .whyus-list li {
+    justify-content: left;
+    padding-left: 20px;
+  }
+
+  .why-us h3 {
+    text-align: center;
+    /* Judul di tengah di mobile */
+  }
+
+
+  .banda-section {
+    height: 500px;
+    background-attachment: scroll;
+
+  }
+
+  .banda-title {
+    font-size: 1.5em;
+    padding-left: 5px;
+  }
+
+  .banda-description {
+    font-size: 0.9em;
+    padding-left: 5px;
+  }
+
+  /* Hilangkan navigasi klien di mobile */
+  .client-nav-container {
+    display: none;
+  }
+
+  /* Container galeri dapat digeser secara horizontal di mobile */
+  .all-clients-gallery {
+    overflow-x: auto;
+  }
+
+  .client-photos-container {
+    width: 90vw;
+    /* Lebar satu kontainer foto */
+  }
+
+  /* Grid menjadi masonry dengan 2 kolom di mobile */
+  .masonry-grid {
+    column-count: 2;
+    column-gap: 10px;
+    padding: 0;
+  }
+
+  /* Ukuran item grid */
+  .grid-item {
+    margin-bottom: 10px;
+  }
+
+  /* Hilangkan tombol navigasi di modal untuk mobile */
+  .modal-content .prev-btn-modal,
+  .modal-content .next-btn-modal {
+    display: none;
+  }
+
+  .close-btn {
+    font-size: 2em;
+    right: 10px;
+    top: 10px;
+  }
+
+  .gallery-section {
+    margin-top: -15px;
+  }
+
+  .destinasi-detail-page {
+    padding: 30px 15px;
+
+  }
+
+  .destinasi-slideshow-card {
+    height: 300px;
+  }
+
+  .destinasi-slideshow-overlay {
+    padding: 20px;
+  }
+
+  .destinasi-title {
+    font-size: 1.5em;
+  }
+
+  .destinasi-description-card {
+    padding: 20px;
+  }
+
+  .transport-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .quote-text {
+    font-size: 2.5em;
+    line-height: 1.5;
+  }
+
+  .quote-author {
+    font-size: 1.7em;
+    font-weight: 600;
+    color: rgb(0, 133, 173);
+    /* Warna teks yang sedikit lebih terang */
+  }
+
+  .why-us {
+    margin-top: -10px;
+  }
+
+  .whyus-list {
+    text-align: left;
+  }
+}
