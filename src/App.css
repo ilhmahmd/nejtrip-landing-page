@@ -868,6 +868,7 @@ body {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1 1 350px;
+  margin-left: -10px;
 }
 
 .transport-card:hover {

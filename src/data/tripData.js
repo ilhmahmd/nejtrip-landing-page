@@ -11,7 +11,7 @@ export const trips = [
       ['Agustus', '25-28', ''],
       ['September', '4-7', '3 orang'],
       ['September', '18-21', ''],
-      ['September', '25-28', '1 org'],
+      ['September', '25-28', '1 orag'],
       ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
@@ -78,7 +78,7 @@ export const trips = [
       ['Agustus', '25-28', ''],
       ['September', '4-7', '3 orang'],
       ['September', '18-21', ''],
-      ['September', '25-28', '1 org'],
+      ['September', '25-28', '1 orang'],
       ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
@@ -133,7 +133,7 @@ export const trips = [
       ['Agustus', '25-28', ''],
       ['September', '4-7', '3 orang'],
       ['September', '18-21', ''],
-      ['September', '25-28', '1 org'],
+      ['September', '25-28', '1 orang'],
       ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
