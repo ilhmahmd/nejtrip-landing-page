@@ -91,7 +91,8 @@ function Trips() {
                 <button
                   key={trip.id}
                   className={`trip-card ${inView ? 'animate' : ''}`}
-                  onClick={() => navigate(`/trip/${trip.id}`)}
+                  // BARIS INI YANG DIUBAH: Gunakan 'trip.slug'
+                  onClick={() => navigate(`/trip/${trip.slug}`)}
                   style={{ border: 'none', background: 'none', padding: 0, cursor: 'pointer' }}
                 >
                   <div className="trip-card-image">
