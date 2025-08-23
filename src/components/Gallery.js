@@ -104,7 +104,7 @@ function Gallery() {
               <img src={dest.image} alt={dest.name} />
               <div className="caption">
                 <h4>{dest.name}</h4>
-                <a href={`/destinasi/${dest.id}`} className="read-more-btn">Baca Selengkapnya</a>
+                <a href={`/destinasi/${dest.slug}`} className="read-more-btn">Baca Selengkapnya</a>
               </div>
             </div>
           ))}

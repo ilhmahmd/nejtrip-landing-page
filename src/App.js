@@ -89,8 +89,8 @@ function App() {
               }
             />
             <Route path="/trip/:slug" element={<TripDetail />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/syaket" element={<Syaket />} />
+            <Route path="/informasi" element={<About />} />
+            <Route path="/syarat-ketentuan" element={<Syaket />} />
             <Route path="/destinasi/:slug" element={<DestinasiDetail />} />
           </Routes>
         </Suspense>

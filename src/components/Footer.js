@@ -19,8 +19,8 @@ function Footer() {
           <h6>Menu</h6>
           <ul>
             <li><a href="/">Beranda</a></li>
-            <li><a href="/about">Informasi</a></li>
-            <li><a href="/syaket">Syarat & Ketentuan</a></li>
+            <li><a href="/informasi">Informasi</a></li>
+            <li><a href="/syarat-ketentuan">Syarat & Ketentuan</a></li>
           </ul>
         </div>
 

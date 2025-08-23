@@ -47,7 +47,7 @@ function Navbar() {
             <li className="nav-item">
               <Link
                 className="nav-link"
-                to="/about"
+                to="/informasi"
                 onClick={() => {
                   closeNavbar();
                   window.scrollTo({ top: 0, behavior: 'smooth' });
