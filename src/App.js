@@ -91,7 +91,7 @@ function App() {
             <Route path="/trip/:slug" element={<TripDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/syaket" element={<Syaket />} />
-            <Route path="/destinasi/:id" element={<DestinasiDetail />} />
+            <Route path="/destinasi/:slug" element={<DestinasiDetail />} />
           </Routes>
         </Suspense>
 
