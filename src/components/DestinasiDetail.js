@@ -1,25 +1,16 @@
 // src/components/DestinasiDetail.js
 
-import React from 'react'; // Hapus useState dan useEffect
+import React from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { destinations } from '../data/destinationsData';
 
 function DestinasiDetail() {
-  const { id } = useParams();
+  // Ubah baris ini: Ambil 'slug' dari URL, bukan 'id'
+  const { slug } = useParams();
   const navigate = useNavigate();
-  const destination = destinations.find(dest => dest.id === parseInt(id));
 
-  // Hapus blok useEffect yang mengontrol slideshow otomatis
-  // useEffect(() => {
-  //   if (destination && destination.slideshow.length > 1) {
-  //     const timer = setInterval(() => {
-  //       setCurrentSlide((prevSlide) =>
-  //         prevSlide === destination.slideshow.length - 1 ? 0 : prevSlide + 1
-  //       );
-  //     }, 5000);
-  //     return () => clearInterval(timer);
-  //   }
-  // }, [destination]);
+  // Ubah baris ini: Cari destinasi di data berdasarkan 'slug'
+  const destination = destinations.find(dest => dest.slug === slug);
 
   if (!destination) {
     return <div className="not-found">Destinasi tidak ditemukan.</div>;
@@ -37,7 +28,6 @@ function DestinasiDetail() {
           ← Kembali
         </button>
 
-        {/* Hapus perulangan untuk slideshow */}
         <div className="destinasi-slideshow-card">
           <div
             className="slide-item"

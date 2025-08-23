@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { destinations } from '../data/destinationsData';
 import { useInView } from 'react-intersection-observer';
 import { gsap } from 'gsap';
+import { Link } from 'react-router-dom';
 
 function Gallery() {
   const titleRef = useRef(null);
@@ -29,9 +30,9 @@ function Gallery() {
           repeatDelay: 2,
         });
         typingTimeline
-        .to(title, { width: 0, duration: 2, ease: "power2.inOut" })
-        .to(title, { duration: 1.5 }, "+=1")
-        .to(title, { width: "100%", duration: 2, ease: "none" });
+          .to(title, { width: 0, duration: 2, ease: "power2.inOut" })
+          .to(title, { duration: 1.5 }, "+=1")
+          .to(title, { width: "100%", duration: 2, ease: "none" });
       }
     }
   }, [inView]);
@@ -104,7 +105,10 @@ function Gallery() {
               <img src={dest.image} alt={dest.name} />
               <div className="caption">
                 <h4>{dest.name}</h4>
-                <a href={`/destinasi/${dest.slug}`} className="read-more-btn">Baca Selengkapnya</a>
+                {/* Ganti <a> dengan <Link> dan href dengan to */}
+                <Link to={`/destinasi/${dest.slug}`} className="read-more-btn">
+                  Baca Selengkapnya
+                </Link>
               </div>
             </div>
           ))}
