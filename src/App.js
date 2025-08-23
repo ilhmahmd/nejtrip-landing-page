@@ -88,7 +88,7 @@ function App() {
                 </>
               }
             />
-            <Route path="/trip/:id" element={<TripDetail />} />
+            <Route path="/trip/:slug" element={<TripDetail />} />
             <Route path="/about" element={<About />} />
             <Route path="/syaket" element={<Syaket />} />
             <Route path="/destinasi/:id" element={<DestinasiDetail />} />
