@@ -4,12 +4,16 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { trips } from '../data/tripData';
 import { FaCheck, FaBan } from 'react-icons/fa';
-import PageLoader from './PageLoader'; // Import komponen PageLoader
+import PageLoader from './PageLoader';
 
 function TripDetail() {
-  const { id } = useParams();
+  // Ubah baris ini: Ambil 'slug' dari URL, bukan 'id'
+  const { slug } = useParams();
+
   const navigate = useNavigate();
-  const trip = trips.find((t) => t.id === parseInt(id));
+
+  // Ubah baris ini: Cari trip di data berdasarkan 'slug'
+  const trip = trips.find((t) => t.slug === slug);
 
   // State untuk mengontrol loader halaman
   const [pageLoading, setPageLoading] = useState(true);

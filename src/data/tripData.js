@@ -2,6 +2,8 @@
 export const trips = [
   {
     id: 1,
+    // Menggunakan kata-kata deskriptif
+    slug: "open-trip-4-hari-3-malam",
     title: "Open Trip 4D3N",
     price: "IDR. 2.999.000 /pax",
     image: "/images/ban.jpg",
@@ -68,6 +70,8 @@ export const trips = [
   },
   {
     id: 2,
+    // Menggunakan kata-kata deskriptif
+    slug: "open-trip-3-hari-2-malam",
     title: "Open Trip 3D2N",
     price: "IDR. 2.500.000 /pax",
     image: "/images/ban.jpg",
@@ -76,10 +80,10 @@ export const trips = [
     mepo: "Pelabuhan/Bandara Banda Neira",
     schedule: [
       ['Agustus', '25-28', ''],
-      ['September', '4-7', '3 orang'],
+      ['September', '4-7', ''],
       ['September', '18-21', ''],
-      ['September', '25-28', '1 orang'],
-      ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
+      ['September', '25-28', ''],
+      ['Oktober', '2-5', ''], // Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",
@@ -117,6 +121,8 @@ export const trips = [
   },
   {
     id: 3,
+    // Menggunakan kata-kata deskriptif
+    slug: "private-trip",
     title: "Private Trip",
     price: "Mulai IDR. 3.300.000 /pax",
     image: "/images/ban.jpg",
@@ -131,10 +137,10 @@ export const trips = [
     ],
     schedule: [
       ['Agustus', '25-28', ''],
-      ['September', '4-7', '3 orang'],
+      ['September', '4-7', ''],
       ['September', '18-21', ''],
-      ['September', '25-28', '1 orang'],
-      ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
+      ['September', '25-28', ''],
+      ['Oktober', '2-5', ''], // Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",
