@@ -13,7 +13,6 @@ import {
   Routes,
   Route
 } from 'react-router-dom';
-import Lenis from '@studio-freight/lenis'; // Import Lenis
 
 // Import komponen inti
 import Navbar from './components/Navbar';
@@ -45,28 +44,7 @@ function App() {
   const audioRef = useRef(null);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Inisialisasi Lenis untuk smooth scroll
-    const lenis = new Lenis({
-      duration: 1.2, // Kecepatan scroll, makin besar makin lambat
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      direction: 'vertical',
-      gestureDirection: 'vertical',
-      smoothWheel: true,
-      wheelMultiplier: 1.5, // Sensitivitas scroll mouse
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    // Hapus Lenis saat komponen unmount
-    return () => {
-      lenis.destroy();
-    };
-  }, []); // [] agar hanya berjalan sekali saat mount
+  // Hapus semua kode yang terkait dengan Lenis di sini
 
   useEffect(() => {
     setTimeout(() => {
