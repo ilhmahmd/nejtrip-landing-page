@@ -19,6 +19,9 @@ body {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 .navbar {
   background: rgba(228, 228, 228, 0.9);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
