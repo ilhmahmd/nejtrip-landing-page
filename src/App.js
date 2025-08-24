@@ -19,8 +19,10 @@ import Navbar from './components/Navbar';
 import Banner from './components/Banner';
 import Footer from './components/Footer';
 import Loader from './components/Loader';
+import Promo from './components/Promo'
 // Import Chatbot Container
 import ChatbotContainer from './components/ChatbotContainer';
+
 
 // Lazy Loading
 const Trips = React.lazy(() => import('./components/Trips'));
@@ -78,6 +80,7 @@ function App() {
                 <>
                   <Banner />
                   <Trips />
+                  <Promo />
                   <Gallery />
                   <WhyUs />
                   <Banda />

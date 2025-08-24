@@ -1,0 +1,246 @@
+/* src/components/Promo.css */
+
+.promo-section {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-image: url('/public/images/g66.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Layer overlay gelap di atas gambar */
+.promo-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.promo-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row; /* Tata letak default untuk desktop (kolom bersebelahan) */
+  gap: 40px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.promo-column {
+  width: 100%; /* Default width, akan diubah di media query */
+}
+
+.left-column {
+  text-align: left;
+}
+
+.promo-title {
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #fb8000;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.1;
+  margin: 0;
+  text-align: right;
+}
+
+.promo-title-word {
+  display: block;
+}
+
+.right-column {
+  text-align: left;
+  /* Menjaga teks di kolom kanan tidak ke bawah saat panjang */
+  display: flex;
+  flex-direction: column;
+}
+
+.promo-benefits {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  width: 500px;
+}
+
+.promo-benefits p {
+  margin: 0;
+}
+
+.and-so-on {
+  font-style: italic;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.promo-note {
+  margin-top: 20px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.police-line {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  /* Tinggi garis police line */
+  background-color: #fb8000;
+  /* Warna kuning */
+  z-index: 3;
+  /* Pastikan di atas semua elemen */
+  overflow: hidden;
+
+}
+
+.police-line-bottom {
+  position: absolute;
+  width: 100%;
+  height: 30px;
+  /* Tinggi garis police line */
+  background-color: rgba(0, 129, 161, 0.5); /* 0.5 adalah nilai transparansi */
+  /* Warna kuning */
+  z-index: 3;
+  /* Pastikan di atas semua elemen */
+  overflow: hidden;
+}
+
+.top-line {
+  top: 0;
+}
+
+.bottom-line {
+  bottom: 0;
+}
+
+.scrolling-text-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  overflow: hidden;
+  z-index: 4;
+  /* Pastikan teks di atas police line */
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.scrolling-text {
+  font-family: "Nunito", sans-serif;
+  white-space: nowrap;
+  font-size: 1rem;
+  /* Ukuran font disesuaikan agar pas di garis */
+  font-weight: 800;
+  color: #ffffff;
+  /* Warna teks hitam agar terlihat di police line */
+  display: inline-block;
+  animation: scroll-right-to-left 60s linear infinite;
+  position: relative;
+  margin-top: 7px;
+  /* Agar z-index bekerja */
+  z-index: 5;
+}
+
+.scrolling-text-bottom {
+  font-family: "Nunito", sans-serif;
+  white-space: nowrap;
+  font-size: 1rem;
+  /* Ukuran font disesuaikan agar pas di garis */
+  font-weight: 800;
+  color: #ffffff;
+  /* Warna teks hitam agar terlihat di police line */
+  display: inline-block;
+  animation: scroll-left-to-right 60s linear infinite;
+  position: relative;
+  margin-top: 7px;
+  /* Agar z-index bekerja */
+  z-index: 5;
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    /* Mulai dari luar layar sebelah kanan */
+    transform: translateX(100vw);
+  }
+
+  100% {
+    /* Berakhir di luar layar sebelah kiri, memastikan teks hilang sepenuhnya */
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes scroll-left-to-right {
+  0% {
+    /* Mulai dari luar layar sebelah kanan */
+    transform: translateX(-100%);
+  }
+
+  100% {
+    /* Berakhir di luar layar sebelah kiri, memastikan teks hilang sepenuhnya */
+    transform: translateX(100vw);
+  }
+}
+
+
+/* Media Query untuk Perangkat Mobile (lebar layar kurang dari 768px) */
+@media (max-width: 767px) {
+  .promo-section {
+      height: 500px; /* Ketinggian otomatis untuk mobile */
+      padding-top: 60px;
+      padding-bottom: 60px;
+  }
+
+  .promo-container {
+      flex-direction: column; /* Ubah ke kolom untuk mobile */
+      justify-content: space-around;
+      gap: 30px;
+      text-align: center;
+  }
+  
+  .promo-column {
+      width: 100%;
+      text-align: center;
+  }
+
+  .left-column,
+  .right-column {
+      text-align: center;
+  }
+
+  .promo-title {
+      font-size: 2.5rem;
+      text-align: center;
+  }
+
+  .promo-benefits {
+      font-size: 1.25rem;
+  }
+  
+  .and-so-on {
+      font-size: 1rem;
+  }
+
+  .promo-note {
+      font-size: 0.8rem;
+  }
+}
