@@ -140,9 +140,8 @@ body::-webkit-scrollbar {
   text-align: center;
 }
 
-.testimonial-title {
+/* .testimonial-title {
   display: inline-block;
- 
   margin: 0 auto;
 
   text-align: center;
@@ -150,7 +149,7 @@ body::-webkit-scrollbar {
 
 .testimonial-title span {
   display: inline-block;
-}
+} */
 
 @keyframes pulse {
   0% {

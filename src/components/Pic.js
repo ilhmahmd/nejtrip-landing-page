@@ -128,7 +128,7 @@ function Pic() {
       const scrollLeft = containerRef.current.scrollLeft;
       const clientWidth = containerRef.current.offsetWidth;
       const newIndex = Math.round(scrollLeft / clientWidth);
-      
+
       setCurrentClientIndex(newIndex);
     }
   };
@@ -157,7 +157,7 @@ function Pic() {
         yoyo: true,
         duration: 0.7,
       });
-      
+
       gsap.set(title, { width: 0 });
 
       const typingTimeline = gsap.timeline({
@@ -207,7 +207,7 @@ function Pic() {
     setCurrentPhotoIndex(prevIndex);
     setCurrentPhoto(currentPhotos[prevIndex]);
   };
-  
+
   const goToNextClient = () => {
     if (containerRef.current) {
       containerRef.current.scrollBy({
@@ -239,13 +239,13 @@ function Pic() {
       goToPrevPhoto();
     }
   };
-  
+
   const currentClient = clientData[currentClientIndex];
 
   return (
     <section id="gallery" className="pic-gallery-section" ref={ref}>
       <div className="pic-container">
-        <h2 style={{ textAlign: "center"}}>
+        <h2 style={{ textAlign: "center" }}>
           <span style={{ display: 'inline-block', whiteSpace: 'nowrap', overflow: 'hidden' }}>
             <span ref={titleRef} className="typing-text">{text}</span>
             <span ref={cursorRef} className="typing-cursor"></span>
@@ -255,11 +255,23 @@ function Pic() {
 
         {/* Navigasi Klien */}
         <div className="pic-client-nav-container">
-          <button onClick={goToPrevClient} className="pic-client-nav-btn prev-btn">&#10094;</button>
+          <button
+            onClick={goToPrevClient}
+            className="pic-client-nav-btn prev-btn"
+            style={{ visibility: currentClientIndex === 0 ? 'hidden' : 'visible' }}
+          >
+            &#10094;
+          </button>
           <h3 className="pic-client-name-title">{currentClient.clientName}</h3>
-          <button onClick={goToNextClient} className="pic-client-nav-btn next-btn">&#10095;</button>
+          <button
+            onClick={goToNextClient}
+            className="pic-client-nav-btn next-btn"
+            style={{ visibility: currentClientIndex === clientData.length - 1 ? 'hidden' : 'visible' }}
+          >
+            &#10095;
+          </button>
         </div>
-        
+
         {/* Teks "Swipe for more" untuk mobile */}
         <p className="pic-swipe-more-text">Swipe untuk grup lainnya</p>
 
@@ -283,8 +295,8 @@ function Pic() {
       {/* Modal (Lightbox) */}
       {modalOpen && currentPhoto && (
         <div className="pic-modal-overlay" onClick={closeModal}>
-          <div 
-            className="pic-modal-content" 
+          <div
+            className="pic-modal-content"
             onClick={(e) => e.stopPropagation()}
             onTouchStart={handleTouchStart}
             onTouchEnd={handleTouchEnd}
