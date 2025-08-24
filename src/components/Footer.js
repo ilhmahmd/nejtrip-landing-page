@@ -25,7 +25,7 @@ function Footer() {
         </div>
 
         {/* Kolom Kanan: Kontak */}
-        <div className="footer-column2">
+        <div className="footer-column">
           <h6>Kontak</h6>
           <ul>
             <li>
