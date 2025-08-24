@@ -95,7 +95,7 @@ const clientData = [
       { id: '6-3', src: '/images/g63.jpg', alt: 'Dokumentasi Klien 3' },
       { id: '6-4', src: '/images/g64.jpg', alt: 'Dokumentasi Klien 3' },
       { id: '6-5', src: '/images/g65.jpg', alt: 'Dokumentasi Klien 3' },
-      { id: '6-6', src: '/images/g66.jpg', alt: 'Dokumentasi Klien 3' },
+      { id: '6-6', src: '/images/g66.png', alt: 'Dokumentasi Klien 3' },
       { id: '6-7', src: '/images/g67.jpg', alt: 'Dokumentasi Klien 3' },
       { id: '6-8', src: '/images/g68.jpg', alt: 'Dokumentasi Klien 3' },
       { id: '6-9', src: '/images/g69.jpg', alt: 'Dokumentasi Klien 3' },
