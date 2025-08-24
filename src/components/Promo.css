@@ -56,7 +56,7 @@
   text-transform: uppercase;
   color: #fb8000;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-  line-height: 1.1;
+  line-height: 0.9;
   margin: 0;
   text-align: right;
 }
@@ -92,7 +92,7 @@
 
 .promo-note {
   margin-top: 20px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);

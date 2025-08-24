@@ -51,7 +51,7 @@ function Promo() {
                     </div>
                     <br></br>
                     <div className="promo-note">
-                        <p>* Bahkan <strong>TRIP GRATIS</strong> untukmu jika berhasil ajak 10 teman</p>
+                        <p>* <strong>TRIP GRATIS</strong> untuk kamu jika berhasil ajak 10 temanmu!</p>
                     </div>
                 </div>
             </div>

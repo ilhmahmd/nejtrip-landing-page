@@ -124,7 +124,7 @@ export const trips = [
     // Menggunakan kata-kata deskriptif
     slug: "private-trip",
     title: "Private Trip",
-    price: "Mulai IDR. 3.300.000 /pax",
+    price: "Mulai IDR. 3.300.000",
     image: "/images/ban.jpg",
     description: "Rasakan kebebasan berpetualang dengan Private Trip 4 hari 3 malam di Banda Neira. Jadwal fleksibel dan layanan personal untuk pengalaman yang lebih intim dan sesuai keinginan Anda.",
     mepo: "Pelabuhan/Bandara Banda Neira",
