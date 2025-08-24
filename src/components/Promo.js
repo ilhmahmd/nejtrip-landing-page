@@ -1,4 +1,5 @@
-import React, { useEffect } from 'react'; // useRef tidak lagi dibutuhkan
+import React, { useEffect } from 'react';
+import { FaLongArrowAltRight } from "react-icons/fa";
 import { useInView } from 'react-intersection-observer';
 import './Promo.css'; 
 
@@ -44,8 +45,8 @@ function Promo() {
                 </div>
                 <div className="promo-column right-column">
                     <div className="promo-benefits">
-                        <p>Ajak 1 teman &nbsp; &gt; &nbsp; Diskon Rp. 200.000</p>
-                        <p>Ajak 2 teman &nbsp; &gt; &nbsp; Diskon Rp. 400.000</p>
+                        <p>Ajak 1 teman &nbsp; <FaLongArrowAltRight /> &nbsp; Diskon Rp. 200.000</p>
+                        <p>Ajak 2 teman &nbsp; <FaLongArrowAltRight /> &nbsp; Diskon Rp. 400.000</p>
                         <p className="and-so-on">Dan seterusnya</p>
                     </div>
                     <br></br>
