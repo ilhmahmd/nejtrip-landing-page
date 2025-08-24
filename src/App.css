@@ -25,7 +25,7 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
-  height: 80px;
+  height: 60px;
 }
 
 .navbar-container {
@@ -38,7 +38,7 @@ body {
 }
 
 .navbar-logo img {
-  height: 60px;
+  height: 40px;
   width: auto;
 }
 
@@ -54,6 +54,7 @@ body {
   font-weight: 800;
   color: #0081a1;
   transition: color 0.3s;
+  font-size: 14px;
 }
 
 .banner {

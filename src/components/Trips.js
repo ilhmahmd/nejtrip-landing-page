@@ -65,10 +65,10 @@ function Trips() {
         <div className="row">
           {/* KOLOM KIRI: Judul dan Deskripsi */}
           <div className="col-lg-6 col-md-12 mb-4 mb-lg-0 d-flex flex-column justify-content-left">
-            <h3 className="display-5 fw-bold" style={{ fontFamily: '"Nunito", sans-serif', color: '#0081a1' }}>
+            <h3 className="display-6 fw-bold" style={{ fontFamily: '"Nunito", sans-serif', color: '#0081a1' }}>
               <span style={{ color: '#fb8000' }}>Neira</span> Explorer Journey
             </h3>
-            <p className="mt-4" style={{ fontFamily: '"Nunito", sans-serif', fontSize: '17px' }}>
+            <p className="mt-4" style={{ fontFamily: '"Nunito", sans-serif', fontSize: '16px' }}>
               Kami menyelenggarakan trip ke Banda Neira untuk Anda yang ingin
               mengeksplorasi keindahan alam dan sejarah yang kaya. <br></br>
               <p></p> Dengan paket

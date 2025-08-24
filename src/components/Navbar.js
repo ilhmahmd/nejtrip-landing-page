@@ -16,8 +16,8 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-white-transparent sticky-top shadow-sm">
       <div className="container">
-        <a className="navbar-brand" href="#home">
-          <img src="/images/twotone.png" alt="Logo" height="50" />
+        <a className="navbar-brand" href="/">
+          <img src="/images/twotone.png" alt="Logo" height="40" />
         </a>
         <button
           className="navbar-toggler shadow-none border-0"
