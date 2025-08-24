@@ -1,48 +1,75 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap } from 'gsap';
 import { useInView } from 'react-intersection-observer';
-import { FaQuoteLeft} from 'react-icons/fa';
-import { AiFillInstagram } from "react-icons/ai";
-import { MdVerified } from "react-icons/md";
+import Slider from "react-slick";
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import './Testimonial.css'; 
 
+// Data Testimoni
 const testimonials = [
-  {
-    name: 'Regita',
-    review: 'Iyes, aku explore Banda Neira trip nya di @nejtrip asli seruu banget kalau kalian mau kesini, kita semua disini baru kenal dan langsung akrab karena dari service nya mantap banget bisa membawa suasananya, dokumentasinya keren banget coba cek ig/tiktok pasti pernah muncul di FYP kalian kalo cari Banda Neira. ',
-    location: 'resyhrn'
-  },
-  {
-    name: 'Ilham Ahmad',
-    review: 'Iyes, aku explore Banda Neira trip nya di @nejtrip asli seruu banget kalau kalian mau kesini, kita semua disini baru kenal dan langsung akrab karena dari service nya mantap banget bisa membawa suasananya, dokumentasinya keren banget coba cek ig/tiktok pasti pernah muncul di FYP kalian kalo cari Banda Neira. ',
-    location: 'ilhamahmadmau'
-  },
-  {
-    name: 'Felisa',
-    review: 'Hai kak, Mau ngucapin thank you so much buat unforgettable trip selama di Banda Neira kemarin. We have lots of fun, itinerary nya teratur dan menyenangkan, guidenya juga seru bgtt enakk, apalagi foto² dan videonya cakep² parah sampe temen²ku bnyak yg nanyain hehe, smoga sukses terus buat nejtrip ya kak 🤲✨',
-    location: 'felisa'
-  }
+  { image: '/images/testi1.jpg', alt: 'Testimoni 1' },
+  { image: '/images/testi2.jpg', alt: 'Testimoni 2' },
+  { image: '/images/testi3.jpg', alt: 'Testimoni 3' },
+  { image: '/images/testi4.jpg', alt: 'Testimoni 4' },
+  { image: '/images/testi5.jpg', alt: 'Testimoni 5' },
+  { image: '/images/testi6.jpg', alt: 'Testimoni 6' },
+  { image: '/images/testi7.jpg', alt: 'Testimoni 7' },
+  { image: '/images/testi8.jpg', alt: 'Testimoni 8' }
 ];
+
+// Komponen Panah Kustom
+const NextArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", right: "20px" }}
+      onClick={onClick}
+    >
+      <FaChevronRight color="white" size="20" />
+    </div>
+  );
+}
+
+const PrevArrow = (props) => {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", left: "20px", zIndex: 1 }}
+      onClick={onClick}
+    >
+      <FaChevronLeft color="white" size="20" />
+    </div>
+  );
+}
 
 function Testimonial() {
   const titleRef = useRef(null);
   const cursorRef = useRef(null);
   const text = "Apa Kata Mereka?";
-  const cardRefs = useRef([]);
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalImage, setModalImage] = useState('');
+  const [modalIndex, setModalIndex] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,
   });
 
-  const addToRefs = (el) => {
-    if (el && !cardRefs.current.includes(el)) {
-      cardRefs.current.push(el);
-    }
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   useEffect(() => {
     if (inView) {
-      // --- Logika Animasi Judul ---
       const title = titleRef.current;
       const cursor = cursorRef.current;
       if (title && cursor) {
@@ -54,25 +81,43 @@ function Testimonial() {
           .to(title, { duration: 1.5 }, "+=1")
           .to(title, { width: 0, duration: 3, ease: "power2.inOut" });
       }
-
-      // --- Logika Animasi Kartu ---
-      gsap.fromTo(cardRefs.current,
-        {
-          y: -50,
-          opacity: 0,
-          scale: 0.8
-        },
-        {
-          y: 0,
-          opacity: 1,
-          scale: 1,
-          duration: 1,
-          ease: "back.out(1.7)",
-          stagger: 0.3
-        }
-      );
     }
   }, [inView]);
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: isMobile ? 1 : 3, // Menggunakan properti ini untuk mobile
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnHover: true,
+    nextArrow: <NextArrow />,
+    prevArrow: <PrevArrow />,
+  };
+
+  const openModal = (image, index) => {
+    setModalImage(image);
+    setModalIndex(index);
+    setModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setModalOpen(false);
+  };
+  
+  const nextImage = () => {
+    const nextIndex = (modalIndex + 1) % testimonials.length;
+    setModalIndex(nextIndex);
+    setModalImage(testimonials[nextIndex].image);
+  };
+
+  const prevImage = () => {
+    const prevIndex = (modalIndex - 1 + testimonials.length) % testimonials.length;
+    setModalIndex(prevIndex);
+    setModalImage(testimonials[prevIndex].image);
+  };
 
   return (
     <section className="testimonial-section" ref={ref}>
@@ -82,19 +127,36 @@ function Testimonial() {
           <span ref={cursorRef} className="typing-cursor"></span>
         </span>
       </h2>
-      <div className="testimonial-container">
-        {testimonials.map((t, index) => (
-          <div key={index} className="testimonial-card" ref={addToRefs}>
-            <FaQuoteLeft className="quote-icon" />
-            <p></p>
-            <p className="testimonial-review">{t.review}</p>
-            <div className="testimonial-divider"></div> {/* Tambahkan garis pembatas di sini */}
-            <p></p>
-            <p className="testimonial-name">{t.name} <MdVerified /></p>
-            <p className="testimonial-loc"><AiFillInstagram /> {t.location}</p>
-          </div>
-        ))}
+      <div className="testimonial-slider-container">
+        <Slider {...settings}>
+          {testimonials.map((t, index) => (
+            <div key={index} className="testimonial-slide">
+              <div className="testimonial-card">
+                <img 
+                  src={t.image} 
+                  alt={t.alt} 
+                  className="testimonial-image" 
+                  onClick={() => openModal(t.image, index)} 
+                />
+              </div>
+            </div>
+          ))}
+        </Slider>
       </div>
+
+      {/* Modal Foto */}
+      {modalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={e => e.stopPropagation()}>
+            <span className="modal-close" onClick={closeModal}>&times;</span>
+            <img src={modalImage} alt="Testimonial Full" className="modal-image" />
+            <div className="modal-nav">
+              <button className="modal-nav-prev" onClick={prevImage}>&#10094;</button>
+              <button className="modal-nav-next" onClick={nextImage}>&#10095;</button>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

@@ -64,7 +64,7 @@ function Gallery() {
             });
             scrollTimeline.to(galleryContainer, {
               x: -totalCardsWidth,
-              duration: 70,
+              duration: 100,
               ease: "none",
             });
           } else {

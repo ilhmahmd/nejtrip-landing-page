@@ -1,0 +1,188 @@
+/* src/components/Testimonial.css */
+
+.testimonial-section {
+    padding: 80px 0;
+    background-color: #ffffff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    font-family: 'Nunito', sans-serif;
+    
+    margin: 0 auto;
+}
+
+.testimonial-title {
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: -40px;
+}
+
+.testimonial-title span {
+    display: inline-block;
+}
+
+.testimonial-slider-container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 750px;
+}
+
+/* --- Navigasi dan Jarak --- */
+.slick-prev:before, .slick-next:before {
+    content: "" !important;
+    font-size: 0 !important;
+    opacity: 0 !important;
+}
+
+.slick-prev, .slick-next {
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0, 129, 161, 0.8);
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.slick-prev {
+    left: -50px;
+}
+.slick-next {
+    right: -50px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+    background-color: #0081a1;
+}
+
+.testimonial-slide {
+    padding: 0 10px;
+}
+
+/* --- Gaya Gambar Testimoni --- */
+.testimonial-card {
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* --- Efek Hover dan Modal --- */
+.testimonial-image:hover {
+    transform: scale(1.05);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 20px;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-image {
+    display: block;
+    max-width: 80vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    z-index: 1001;
+}
+
+.modal-nav-prev,
+.modal-nav-next {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.modal-nav-prev:hover,
+.modal-nav-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+@media (max-width: 768px) {
+    .testimonial-title {
+        font-size: 2rem;
+    }
+    .testimonial-card {
+        height: 500px;
+        width: 300px; /* Lebar yang Anda inginkan */
+        margin: 0 auto; /* Tambahkan baris ini */
+    }
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+
+    .testimonial-title {
+        font-size: 28px;
+    }
+}

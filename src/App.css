@@ -142,9 +142,9 @@ body::-webkit-scrollbar {
 
 .testimonial-title {
   display: inline-block;
-  /* Penting untuk animasi width */
+ 
   margin: 0 auto;
-  /* Menengahkan judul */
+
   text-align: center;
 }
 
@@ -337,8 +337,8 @@ body::-webkit-scrollbar {
 .footer {
   background-color: #0081a1;
   color: #ffffff;
-  padding: 40px 20px 20px;
-  font-size: 16px;
+  padding: 40px 20px 1px;
+  font-size: 14px;
   font-family: 'Nunito', sans-serif;
 }
 
@@ -357,7 +357,7 @@ body::-webkit-scrollbar {
 }
 
 .footer-logo {
-  width: 140px;
+  width: 100px;
   margin-bottom: 10px;
   object-fit: contain;
 }
@@ -366,10 +366,11 @@ body::-webkit-scrollbar {
   color: #ffffff;
   line-height: 1.5;
   max-width: 300px;
+  font-size: 14px;
 }
 
 .footer-column h6 {
-  font-size: 16px;
+  font-size: 14px;
   margin-bottom: 12px;
   font-weight: bold;
 }
@@ -396,7 +397,7 @@ body::-webkit-scrollbar {
 
 .footer-bottom {
   text-align: center;
-  padding-top: 20px;
+  padding: 10px;
   border-top: 4px solid #df9800;
   color: #ffffff;
   font-size: 14px;
@@ -501,94 +502,7 @@ body::-webkit-scrollbar {
   font-size: 14px;
 }
 
-.testimonial-section {
-  padding: 40px 20px;
-  background-color: #fefefe;
-  text-align: center;
-}
 
-.testimonial-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-}
-
-.testimonial-card {
-  background-color: #0081a1;
-  border-radius: 10px;
-  max-width: 300px;
-  /* Kunci perbaikan 1: Atur padding atas lebih besar untuk ruang ikon */
-  padding-top: 60px;
-  padding-right: 30px;
-  padding-bottom: 30px;
-  padding-left: 30px;
-  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
-  color: #fff;
-  text-align: left;
-  position: relative;
-
-  /* Kunci perbaikan 2: Flexbox untuk menyusun elemen secara vertikal */
-  display: flex;
-  flex-direction: column;
-  margin-top: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  /* Kunci: Membesarkan card dan mengubah bayangan */
-  transform: scale(5.05);
-  box-shadow: 0px 10px 30px rgba(223, 152, 0, 0.6);
-}
-
-.testimonial-card p {
-  margin-top: 0;
-}
-
-.testimonial-review {
-  font-size: 16px;
-  font-style: normal;
-  /* Kunci perbaikan 3: Beri margin lebih besar dari atas */
-  margin-top: 0;
-  margin-bottom: 10;
-  font-family: "Nunito", sans-serif;
-  color: #fff;
-  font-style: italic;
-  font-weight: 500;
-}
-
-.testimonial-name {
-  font-weight: bold;
-  color: #ffffff;
-  font-size: 21px;
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 0;
-  margin-top: 10px;
-}
-
-.testimonial-loc {
-  font-weight: 400;
-  color: #b9f1ff;
-  font-size: 16px;
-  font-family: "Nunito", sans-serif;
-  margin-bottom: 0;
-  margin-top: 10px;
-}
-
-.quote-icon {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  font-size: 35px;
-  color: #ffffff;
-}
-
-/* Styling garis pembatas di atas nama */
-.testimonial-divider {
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  /* Kunci perbaikan 4: Dorong garis pembatas ke bagian paling bawah */
-  margin-top: auto;
-}
 
 .banda-section {
   position: relative;
