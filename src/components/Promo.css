@@ -3,7 +3,7 @@
 .promo-section {
   position: relative;
   width: 100%;
-  height: 400px;
+  height: 450px;
   background-image: url('/public/images/g66.jpg');
   background-size: cover;
   background-position: center;
@@ -170,7 +170,7 @@
   color: #ffffff;
   /* Warna teks hitam agar terlihat di police line */
   display: inline-block;
-  animation: scroll-left-to-right 60s linear infinite;
+  animation: scroll-left-to-right 30s linear infinite;
   position: relative;
   margin-top: 7px;
   /* Agar z-index bekerja */

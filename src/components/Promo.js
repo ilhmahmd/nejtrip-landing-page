@@ -56,7 +56,7 @@ function Promo() {
             </div>
             <div className="police-line-bottom bottom-line">
                 <div className="scrolling-text-wrapper">
-                    <h2 className="scrolling-text-bottom">YUK SEGERA DAFTAR DAN NABUNG SEKARANG JUGA!</h2>
+                    <h2 className="scrolling-text">YUK SEGERA DAFTAR DAN NABUNG SEKARANG JUGA!</h2>
                 </div>
             </div>
         </section>
