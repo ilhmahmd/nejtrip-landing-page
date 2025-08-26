@@ -214,6 +214,9 @@
       height: 500px; /* Ketinggian otomatis untuk mobile */
       padding-top: 60px;
       padding-bottom: 60px;
+      background-size: cover;
+      background-repeat: no-repeat; /* Hindari gambar berulang */
+      background-position: center; /* Posisikan gambar di tengah */
   }
 
   .promo-container {
