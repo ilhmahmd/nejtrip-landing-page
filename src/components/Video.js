@@ -94,7 +94,7 @@ const Video = () => {
             position: 'relative',
             paddingBottom: '100%', // Menggunakan paddingBottom untuk menjaga rasio 9x16
             height: 0,
-            maxWidth: '400px', // Batasi lebar maksimum video di sini
+            maxWidth: '399px', // Batasi lebar maksimum video di sini
             margin: 'auto'
           }}>
             <iframe
