@@ -7,6 +7,22 @@ import { useInView } from 'react-intersection-observer';
 // Data foto klien yang sudah dikelompokkan
 const clientData = [
   {
+    id: 7,
+    clientName: '360° Camera',
+    photos: [
+      { id: '7-1', src: '/images/insta1.jpg', alt: 'Dokumentasi Klien 3' },
+      { id: '7-2', src: '/images/insta2.jpg', alt: 'Dokumentasi Klien 3' },
+      { id: '7-3', src: '/images/insta3.jpg', alt: 'Dokumentasi Klien 3' },
+      { id: '7-4', src: '/images/insta4.jpg', alt: 'Dokumentasi Klien 3' },
+      { id: '7-5', src: '/images/insta5.jpg', alt: 'Dokumentasi Klien 3' },
+      // { id: '7-1', src: '/images/insta1.jpg', alt: 'Dokumentasi Klien 3' },
+      // { id: '7-2', src: '/images/insta2.jpg', alt: 'Dokumentasi Klien 3' },
+      // { id: '7-3', src: '/images/insta3.jpg', alt: 'Dokumentasi Klien 3' },
+      // { id: '7-4', src: '/images/insta4.jpg', alt: 'Dokumentasi Klien 3' },
+      // { id: '7-5', src: '/images/insta5.jpg', alt: 'Dokumentasi Klien 3' },
+    ],
+  },
+  {
     id: 1,
     clientName: 'Couple Trip (Private Trip)',
     photos: [
@@ -102,6 +118,7 @@ const clientData = [
       { id: '6-10', src: '/images/g610.jpg', alt: 'Dokumentasi Klien 3' },
     ],
   },
+  
 ];
 
 function Pic() {
