@@ -10,11 +10,19 @@ export const trips = [
     description: "Nikmati petualangan tak terlupakan selama 4 hari 3 malam di Banda Neira. Trip ini dirancang untuk Anda yang ingin menjelajahi keindahan alam, kekayaan sejarah, dan budaya di salah satu surga tersembunyi di Indonesia.",
     mepo: "Pelabuhan/Bandara Banda Neira",
     schedule: [
-      ['Agustus', '25-28', ''],
-      ['September', '4-7', '3 orang'],
-      ['September', '18-21', ''],
-      ['September', '25-28', '1 orang'],
-      ['Oktober', '2-5', '2 orang'], // Contoh jadwal bulan Oktober
+      ['September', '25 - 28', '1 orang'],
+      ['Oktober', '02 - 05', '2 orang'],
+      ['Oktober', '16 - 19', '2 orang'],
+      ['Oktober', '23 - 26', '2 orang'],
+      ['Oktober-November', '30 - 02', '2 orang'],
+      ['November', '06 - 09', '2 orang'],
+      ['November', '13 - 16', '2 orang'],
+      ['November', '20 - 23', '2 orang'],
+      ['November', '27 - 30', '2 orang'],
+      ['Desember', '04 - 07', '2 orang'],
+      ['Desember', '11 - 14', '2 orang'],
+      ['Desember', '18 - 21', '2 orang'],
+      ['Desember', '25 - 28', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",
@@ -79,11 +87,19 @@ export const trips = [
     notes: "Lebih dari 5 orang free pulau Hatta/nailaka",
     mepo: "Pelabuhan/Bandara Banda Neira",
     schedule: [
-      ['Agustus', '25-28', ''],
-      ['September', '4-7', ''],
-      ['September', '18-21', ''],
-      ['September', '25-28', ''],
-      ['Oktober', '2-5', ''], // Contoh jadwal bulan Oktober
+      ['September', '25 - 28', '1 orang'],
+      ['Oktober', '02 - 05', '2 orang'],
+      ['Oktober', '16 - 19', '2 orang'],
+      ['Oktober', '23 - 26', '2 orang'],
+      ['Oktober-November', '30 - 02', '2 orang'],
+      ['November', '06 - 09', '2 orang'],
+      ['November', '13 - 16', '2 orang'],
+      ['November', '20 - 23', '2 orang'],
+      ['November', '27 - 30', '2 orang'],
+      ['Desember', '04 - 07', '2 orang'],
+      ['Desember', '11 - 14', '2 orang'],
+      ['Desember', '18 - 21', '2 orang'],
+      ['Desember', '25 - 28', '2 orang'], // Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",
@@ -136,11 +152,19 @@ export const trips = [
       { pax: "5", price: "IDR 3.300.000 /pax" },
     ],
     schedule: [
-      ['Agustus', '25-28', ''],
-      ['September', '4-7', ''],
-      ['September', '18-21', ''],
-      ['September', '25-28', ''],
-      ['Oktober', '2-5', ''], // Contoh jadwal bulan Oktober
+      ['September', '25 - 28', '1 orang'],
+      ['Oktober', '02 - 05', '2 orang'],
+      ['Oktober', '16 - 19', '2 orang'],
+      ['Oktober', '23 - 26', '2 orang'],
+      ['Oktober-November', '30 - 02', '2 orang'],
+      ['November', '06 - 09', '2 orang'],
+      ['November', '13 - 16', '2 orang'],
+      ['November', '20 - 23', '2 orang'],
+      ['November', '27 - 30', '2 orang'],
+      ['Desember', '04 - 07', '2 orang'],
+      ['Desember', '11 - 14', '2 orang'],
+      ['Desember', '18 - 21', '2 orang'],
+      ['Desember', '25 - 28', '2 orang'],// Contoh jadwal bulan Oktober
     ],
     day1: [
       "Penjemputan di Pelabuhan/Bandara Banda Neira",

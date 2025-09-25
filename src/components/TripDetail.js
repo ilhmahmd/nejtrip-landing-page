@@ -138,7 +138,6 @@ function TripDetail() {
                 <tr>
                   <th>Bulan</th>
                   <th>Tanggal</th>
-                  <th>Peserta</th> {/* Kolom baru untuk jumlah peserta */}
                 </tr>
               </thead>
               <tbody>
@@ -147,7 +146,6 @@ function TripDetail() {
                   <tr key={idx}>
                     <td>{bulan}</td>
                     <td>{tanggal}</td>
-                    <td>{peserta}</td> {/* Menampilkan jumlah peserta */}
                   </tr>
                 ))}
               </tbody>
