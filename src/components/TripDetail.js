@@ -104,7 +104,7 @@ function TripDetail() {
             style={{ cursor: 'pointer' }}
           >
             <h2 className="h6 mb-0" style={{ fontWeight: 800 }}>
-              Meeting Point
+            📍 Meeting Point
             </h2>
           </div>
           <div className="card-body">
@@ -127,7 +127,7 @@ function TripDetail() {
           style={{ cursor: 'pointer' }}
         >
           <h2 className="h6 mb-0" style={{ fontWeight: 800, textAlign: 'center' }}>
-            Jadwal Open Trip 2025
+          📅 Jadwal Open Trip 2025
           </h2>
           <span>{showSection.schedule ? '▲' : '▼'}</span>
         </div>
@@ -159,15 +159,15 @@ function TripDetail() {
         <div className="card mb-3 shadow-sm">
           <div className="card-header">
             <h2 className="h6 mb-0" style={{ fontWeight: 800 }}>
-              Harga Private Trip
+            💰 Harga Private Trip
             </h2>
           </div>
           <div className="card-body">
             <table className="table table-striped">
               <thead>
                 <tr>
-                  <th>Jumlah Orang</th>
-                  <th>Harga Per Orang</th> {/* Perbarui judul kolom agar lebih jelas */}
+                  <th>👥 Jumlah Orang</th>
+                  <th>💲 Harga Per Orang</th> {/* Perbarui judul kolom agar lebih jelas */}
                 </tr>
               </thead>
               <tbody>
@@ -191,56 +191,76 @@ function TripDetail() {
           style={{ cursor: 'pointer' }}
         >
           <h2 className="h6 mb-0" style={{ fontWeight: 800 }}>
-            Itinerary
+          📝 Itinerary
           </h2>
           <span>{showSection.itinerary ? '▲' : '▼'}</span>
         </div>
         {showSection.itinerary && (
           <div className="card-body">
-            {trip.day1 && (
-              <>
-                <h6>Hari 1</h6>
-                <ul className="mb-0">
-                  {trip.day1.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-                <br />
-              </>
-            )}
-            {trip.day2 && (
-              <>
-                <h6>Hari 2</h6>
-                <ul className="mb-0">
-                  {trip.day2.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-                <br />
-              </>
-            )}
-            {trip.day3 && (
-              <>
-                <h6>Hari 3</h6>
-                <ul className="mb-0">
-                  {trip.day3.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-                <br />
-              </>
-            )}
-            {trip.day4 && (
-              <>
-                <h6>Hari 4</h6>
-                <ul className="mb-0">
-                  {trip.day4.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
-              </>
-            )}
-          </div>
+          {/* Hari 1 */}
+          {trip.day1 && (
+            <>
+            <p></p>
+              <h6>Day 1</h6>
+              <p></p>
+              <ul className="mb-0" style={{ listStyleType: 'none', paddingLeft: 0 }}>
+                {trip.day1.map((item, i) => (
+                  <li key={i} style={{ marginBottom: '0.25rem' }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <br />
+            </>
+          )}
+      
+          {/* Hari 2 */}
+          {trip.day2 && (
+            <>
+              <h6>Day 2</h6>
+              <p></p>
+              <ul className="mb-0" style={{ listStyleType: 'none', paddingLeft: 0 }}>
+                {trip.day2.map((item, i) => (
+                  <li key={i} style={{ marginBottom: '0.25rem' }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <br />
+            </>
+          )}
+      
+          {/* Hari 3 */}
+          {trip.day3 && (
+            <>
+              <h6>Day 3</h6>
+              <p></p>
+              <ul className="mb-0" style={{ listStyleType: 'none', paddingLeft: 0 }}>
+                {trip.day3.map((item, i) => (
+                  <li key={i} style={{ marginBottom: '0.25rem' }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <br />
+            </>
+          )}
+      
+          {/* Hari 4 */}
+          {trip.day4 && (
+            <>
+              <h6>Day 4</h6>
+              <p></p>
+              <ul className="mb-0" style={{ listStyleType: 'none', paddingLeft: 0 }}>
+                {trip.day4.map((item, i) => (
+                  <li key={i} style={{ marginBottom: '0.25rem' }}>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+      </div>
         )}
       </div>
 
@@ -277,7 +297,7 @@ function TripDetail() {
               ))}
             </ul>
             <br></br>
-            <p><strong style={{ color: 'green' }}>Free</strong> Dokumentasi Underwater (Insta360)</p>
+            <p><strong style={{ color: 'green' }}>Free</strong> 📸🤿 Dokumentasi Underwater (Insta360)</p>
           </div>
         )}
       </div>
