@@ -846,9 +846,17 @@ body::-webkit-scrollbar {
 
 /* Styling untuk widget pilihan */
 .chatbot-options-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  .whatsapp-container {
+    position: fixed;
+    /* Ubah bottom menjadi nilai yang lebih tinggi */
+    bottom: 150px; 
+    right: 20px;
+    /* Pastikan z-index tertinggi */
+    z-index: 9999; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
 }
 
 .chatbot-option-button {
@@ -870,6 +878,83 @@ body::-webkit-scrollbar {
   border-color: #ccc; /* Warna border sedikit berubah */
   transform: translateY(-2px); /* Efek sedikit naik saat di-hover */
 }
+
+/* --- WA CHOICE BUTTON STYLES --- */
+
+.whatsapp-container {
+  position: fixed;
+  /* Ubah bottom menjadi nilai yang lebih tinggi */
+  bottom: 150px; 
+  right: 20px;
+  /* Pastikan z-index tertinggi */
+  z-index: 1000; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.whatsapp-options-wrapper {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Jarak antar pilihan */
+}
+
+.whatsapp-option-link {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #25D366; /* Warna Hijau WA */
+  color: white;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  width: auto;
+}
+
+.whatsapp-option-link:hover {
+  background-color: #1FAF59;
+}
+
+.whatsapp-option-icon {
+  margin-right: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+.whatsapp-option-text {
+  font-family: "Nunito", sans-serif;
+  font-weight: bold;
+  white-space: nowrap; /* Mencegah teks terpotong */
+}
+
+/* Tombol Pemicu Utama */
+.whatsapp-toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border-radius: 50%;
+  background-color: #25D366;
+  border: none;
+}
+
+/* Menghilangkan stroke saat diklik/focus */
+.whatsapp-toggle-button:focus,
+.whatsapp-toggle-button:active {
+    outline: none !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4); 
+    background-color: #25D366; 
+}
+
+
+.whatsapp-icon-toggle {
+  width: 20px;
+  height: 20px;
+}
+
+/* Pastikan Anda menghapus CSS untuk tautan WA floating lama jika ada konflik */
+/* ... (CSS Anda yang sudah ada untuk komponen lain) ... */
 
 
 @media (max-width: 991px) {

@@ -22,6 +22,8 @@ import Loader from './components/Loader';
 import Promo from './components/Promo'
 // Import Chatbot Container
 import ChatbotContainer from './components/ChatbotContainer';
+// >>> IMPORT KOMPONEN WHATSAPP BARU DI SINI <<<
+import WhatsAppChoiceButton from './components/WhatsAppChoiceButton'; 
 
 
 // Lazy Loading
@@ -102,14 +104,14 @@ function App() {
 
         <Footer />
 
+        {/* >>> GANTI KODE WHATSAPP LAMA DENGAN KOMPONEN BARU <<< */}
+        <WhatsAppChoiceButton loading={loading} />
+        {/* >>> AKHIR PENGGANTIAN <<< */}
+
         <ChatbotContainer />
 
-        {!loading && (
-          <a href="https://wa.me/6281264427001?text=Halo%20kak,%20aku%20tertarik%20sama%20tripnya%20setelah%20liat%20di%20website.%20Bisa%20dikirim%20info%20selengkapnya%20kak?" className="whatsapp-float" target="_blank" rel="noopener noreferrer">
-            <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" className="whatsapp-icon" />
-            <span className="whatsapp-text" style={{ fontFamily: '"Nunito", sans-serif' }}>Hubungi Kami via WhatsApp</span>
-          </a>
-        )}
+        
+
       </div>
     </Router>
   );
