@@ -127,7 +127,7 @@ function TripDetail() {
           style={{ cursor: 'pointer' }}
         >
           <h2 className="h6 mb-0" style={{ fontWeight: 800, textAlign: 'center' }}>
-          📅 Jadwal Open Trip 2025
+          📅 Jadwal Open Trip 2026
           </h2>
           <span>{showSection.schedule ? '▲' : '▼'}</span>
         </div>
