@@ -5,7 +5,7 @@ import { destinations } from '../data/destinationsData';
 import { transportOptions } from '../data/transportData';
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyAdhx7BkacJ8vhF6-cK7LKz5-hN8b2-1qM");
+const genAI = new GoogleGenerativeAI("AIzaSyDDBgNbYr0h-sp8dbvCPGRZ8QmOzLmXDUY");
 
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc) {
